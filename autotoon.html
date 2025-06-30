@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>선택형 웹툰</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+    }
+    img {
+      max-width: 80%;
+      margin-top: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+    }
+    .choice {
+      margin-top: 20px;
+    }
+    .choice button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>웹툰 스토리</h1>
+  <img id="sceneImage" src="A.png" alt="현재 장면">
+
+  <div class="choice" id="choices">
+    <button onclick="choose('B.png')">"이 길로 간다"</button>
+    <button onclick="choose('C.png')">"다른 길을 선택한다"</button>
+  </div>
+
+  <script>
+    function choose(imageFile) {
+      document.getElementById('sceneImage').src = imageFile;
+      document.getElementById('choices').style.display = 'none'; // 선택 후 버튼 숨기기
+    }
+  </script>
+
+</body>
+</html>
